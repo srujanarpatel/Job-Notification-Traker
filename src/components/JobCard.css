@@ -1,0 +1,101 @@
+/* JobCard CSS */
+.job-card {
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    position: relative;
+}
+
+.job-card:hover {
+    border-color: #ddd;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    /* Very subtle premium shadow on hover only */
+}
+
+.job-card-header {
+    border-bottom: 1px solid #f5f5f5;
+    padding-bottom: 12px;
+}
+
+.job-title {
+    font-family: var(--font-heading);
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+}
+
+.job-company {
+    font-family: var(--font-body);
+    font-size: 14px;
+    color: #666;
+    font-weight: 500;
+}
+
+.job-source-badge {
+    font-size: 12px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 4px;
+    background-color: transparent;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Meta Grid: Location, Experience, Posted */
+.job-meta-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    font-size: 13px;
+    color: #777;
+}
+
+.job-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* Salary */
+.job-salary {
+    font-family: var(--font-heading);
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-accent);
+}
+
+/* Skills */
+.job-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.skill-tag {
+    background: #f9f9f9;
+    border: 1px solid #eee;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    color: #555;
+    font-weight: 500;
+}
+
+/* Actions */
+.job-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: auto;
+    /* Push to bottom if variable height */
+    border-top: 1px solid #f5f5f5;
+    padding-top: 16px;
+}

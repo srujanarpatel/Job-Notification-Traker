@@ -1,0 +1,108 @@
+/* Button Component */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 24px;
+    font-family: var(--font-body);
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: var(--border-radius);
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    line-height: 1.5;
+    text-decoration: none;
+}
+
+.btn-primary {
+    background-color: var(--color-accent);
+    color: white;
+    border-color: var(--color-accent);
+}
+
+.btn-primary:hover {
+    background-color: #6d0000;
+    /* Darker red */
+    border-color: #6d0000;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-gray-100);
+    border-color: #999;
+}
+
+.btn-success {
+    background-color: var(--color-success);
+    color: white;
+}
+
+.btn-warning {
+    background-color: var(--color-warning);
+    color: #111;
+}
+
+/* Input Component */
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: var(--s-16);
+    width: 100%;
+}
+
+.input-label {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: var(--s-8);
+    color: var(--text-primary);
+}
+
+.input-field {
+    padding: 12px 16px;
+    font-family: var(--font-body);
+    font-size: 16px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    background-color: white;
+    transition: border-color var(--transition-fast);
+    outline: none;
+    width: 100%;
+}
+
+.input-field:focus {
+    border-color: var(--text-primary);
+}
+
+.input-field::placeholder {
+    color: #aaa;
+}
+
+/* Card Component */
+.card {
+    background-color: white;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: var(--s-24);
+    margin-bottom: var(--s-24);
+    /* No shadow as per rules */
+}
+
+.card-title {
+    font-family: var(--font-heading);
+    font-size: 20px;
+    margin-bottom: var(--s-16);
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.card-body {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+}

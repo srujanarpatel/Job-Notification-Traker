@@ -1,0 +1,281 @@
+/* Layout Structure */
+.layout-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    /* Prevent body scroll */
+}
+
+/* Top Bar */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+    padding: 0 var(--s-40);
+    background-color: white;
+    border-bottom: 1px solid var(--border-color);
+    flex-shrink: 0;
+}
+
+.project-name {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--text-primary);
+}
+
+.progress-indicator {
+    font-size: 14px;
+    color: #666;
+    /* Muted text */
+    font-weight: 500;
+}
+
+.status-badge {
+    padding: 6px 12px;
+    border-radius: var(--border-radius);
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    background-color: var(--color-gray-100);
+    color: var(--text-primary);
+}
+
+.status-badge[data-status="in-progress"] {
+    background-color: #fff3e0;
+    /* Amber tinted background */
+    color: #e65100;
+    /* Darker amber */
+    border: 1px solid #ffe0b2;
+}
+
+/* Context Header */
+.context-header {
+    padding: var(--s-40) var(--s-64);
+    background-color: var(--bg-color);
+    border-bottom: 1px solid var(--border-color);
+    flex-shrink: 0;
+    /* Header doesn't shrink */
+}
+
+.context-header h1 {
+    font-size: 32px;
+    margin-bottom: var(--s-8);
+    color: var(--text-primary);
+}
+
+.context-header .subtext {
+    font-size: 18px;
+    color: #555;
+    max-width: 720px;
+    margin: 0;
+    font-weight: 400;
+}
+
+/* Main Content Split */
+.main-content-split {
+    display: flex;
+    flex: 1;
+    /* Fills remaining space */
+    overflow: hidden;
+    /* Contains scrollbars */
+}
+
+.primary-workspace {
+    flex: 7;
+    /* 70% width */
+    padding: var(--s-64);
+    /* Generous spacing */
+    background-color: white;
+    overflow-y: auto;
+    border-right: 1px solid var(--border-color);
+}
+
+.secondary-panel {
+    flex: 3;
+    /* 30% width */
+    padding: var(--s-24);
+    background-color: var(--bg-color);
+    overflow-y: auto;
+    border-left: 1px solid var(--border-color);
+    /* Redundant if primary has right border? Use one. */
+    border-left: none;
+    /* Rely on primary's right border */
+}
+
+/* Secondary Panel Content */
+.panel-section {
+    background-color: white;
+    padding: var(--s-16);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
+    margin-bottom: var(--s-16);
+}
+
+.panel-section h3 {
+    font-size: 16px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: var(--s-8);
+    margin-bottom: var(--s-8);
+}
+
+.panel-section p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.panel-label {
+    display: block;
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #888;
+    font-weight: 600;
+    margin-bottom: var(--s-8);
+}
+
+.prompt-box {
+    display: flex;
+    align-items: center;
+    background: #f9f9f9;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 4px;
+}
+
+.prompt-box code {
+    flex: 1;
+    font-family: 'Consolas', monospace;
+    font-size: 13px;
+    padding: 0 var(--s-8);
+    color: #333;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.btn-copy {
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 4px 8px;
+    font-size: 11px;
+    cursor: pointer;
+    color: #666;
+}
+
+.btn-copy:hover {
+    background: #eee;
+}
+
+/* Panel Actions */
+.panel-actions {
+    display: flex;
+    flex-direction: column;
+    gap: var(--s-16);
+    margin-top: var(--s-24);
+}
+
+.row-actions {
+    display: flex;
+    gap: var(--s-8);
+}
+
+/* Buttons (local overrides or base) */
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 16px;
+    border-radius: var(--border-radius);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    border: 1px solid transparent;
+    width: 100%;
+    /* Default for panel buttons */
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+}
+
+.btn-secondary:hover {
+    border-color: #999;
+    background: #fafafa;
+}
+
+.btn-success {
+    background-color: var(--color-success);
+    color: white;
+    border-color: transparent;
+}
+
+.btn-success:hover {
+    opacity: 0.9;
+}
+
+.btn-warning {
+    background-color: var(--color-warning);
+    color: #111;
+    border-color: transparent;
+}
+
+.btn-warning:hover {
+    opacity: 0.9;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+/* Proof Footer */
+.proof-footer {
+    height: 64px;
+    /* Fixed height for consistency */
+    border-top: 1px solid var(--border-color);
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    /* Align to right? Or center? Prompt says "Checklist style". "Each checkbox requires user proof input" */
+    padding: 0 var(--s-40);
+    flex-shrink: 0;
+}
+
+.proof-container {
+    display: flex;
+    gap: var(--s-40);
+}
+
+.proof-item {
+    display: flex;
+    align-items: center;
+    gap: var(--s-8);
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-primary);
+    cursor: pointer;
+    user-select: none;
+}
+
+.proof-item input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--color-accent);
+    margin: 0;
+    cursor: pointer;
+}
